@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "ca910e05-2239-4acc-b748-3c57c445672e",
+		"name": "clase_27_09",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26654653"
+	},
+	"item": [
+		{
+			"name": "Get_All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/fakestoreapi.com/products",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/fakestoreapi.com/products/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"olorama\",\n    \"price\": 700,\n    \"description\": \"la historia de los olores\",\n    \"category\": \"historia\",\n    \"image\": \"foto.png\",\n    \"rating\": {\n        \"rate\": 8.0,\n        \"count\": 12\n    }\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/fakestoreapi.com/products",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"id\":1,\n    \"title\": \"un viaje \",\n    \"price\": 800,\n    \"category\": \"aventura\",\n    \"image\": \"foto.png\",\n    \"rating\": {\n        \"rate\": 9.0,\n        \"count\": 12\n    }\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/fakestoreapi.com/products/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/fakestoreapi.com/products/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mayor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/fakestoreapi.com/products/mayor?precioMinimo=800",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"mayor"
+					],
+					"query": [
+						{
+							"key": "precioMinimo",
+							"value": "800"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mayor_sql",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/fakestoreapi.com/products/mayor_sql?precioMinimo=800",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"mayor_sql"
+					],
+					"query": [
+						{
+							"key": "precioMinimo",
+							"value": "800"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Entre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/fakestoreapi.com/products/entre?precioMinimo=700&precioMaximo=1000",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"entre"
+					],
+					"query": [
+						{
+							"key": "precioMinimo",
+							"value": "700"
+						},
+						{
+							"key": "precioMaximo",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "entre_sql",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/fakestoreapi.com/products/entre_sql?precioMinimo=500&precioMaximo=1000",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"entre_sql"
+					],
+					"query": [
+						{
+							"key": "precioMinimo",
+							"value": "500"
+						},
+						{
+							"key": "precioMaximo",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
